@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 学习实验室</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__badge">AI 初学者与提升者的在线教室</p>
+        <h1>掌握人工智能，从这套精选课程开始</h1>
+        <p class="hero__subtitle">
+          从零基础到实战项目，循序渐进地学习机器学习、深度学习与大型语言模型。
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#curriculum">查看课程大纲</a>
+          <a class="btn btn--ghost" href="#mentors">认识导师团队</a>
+        </div>
+      </div>
+      <div class="hero__illustration" aria-hidden="true">
+        <div class="orbit">
+          <div class="planet planet--blue"></div>
+          <div class="planet planet--purple"></div>
+          <div class="planet planet--yellow"></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="highlights" class="section highlights">
+        <h2>为什么选择 AI 学习实验室？</h2>
+        <div class="grid grid--three">
+          <article class="card">
+            <h3>循序渐进的学习路径</h3>
+            <p>
+              针对零基础到进阶研发人员设计，课程分为基础、项目与研究三个阶段，帮助你稳步提升。
+            </p>
+          </article>
+          <article class="card">
+            <h3>真实场景项目实战</h3>
+            <p>
+              覆盖智能客服、推荐系统、AIGC 应用等热门场景，通过动手项目积累可展示的作品。
+            </p>
+          </article>
+          <article class="card">
+            <h3>导师 1 对 1 指导</h3>
+            <p>
+              一线工程师与研究员组成的导师团队，提供代码评审、学习规划与职业辅导。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="curriculum" class="section curriculum">
+        <div class="section__header">
+          <h2>课程大纲</h2>
+          <p>完整的 12 周学习路径，可根据自身背景自由选择起点。</p>
+        </div>
+        <div class="curriculum__timeline" id="curriculumTimeline" aria-live="polite"></div>
+        <div class="curriculum__filter">
+          <button class="btn btn--chip is-active" data-filter="all">全部阶段</button>
+          <button class="btn btn--chip" data-filter="foundation">基础</button>
+          <button class="btn btn--chip" data-filter="project">项目</button>
+          <button class="btn btn--chip" data-filter="research">研究</button>
+        </div>
+      </section>
+
+      <section id="mentors" class="section mentors">
+        <div class="section__header">
+          <h2>导师团队</h2>
+          <p>结合技术与教育经验，为你保驾护航。</p>
+        </div>
+        <div class="grid grid--three mentors__grid">
+          <article class="card mentor">
+            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80" alt="导师 张琳" />
+            <div>
+              <h3>张琳 · NLP 专家</h3>
+              <p>前大型互联网公司资深算法工程师，擅长对话系统与大语言模型微调。</p>
+            </div>
+          </article>
+          <article class="card mentor">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="导师 David" />
+            <div>
+              <h3>David Chen · 计算机视觉</h3>
+              <p>AI 创业公司联合创始人，研究方向包括多模态理解与视觉生成。</p>
+            </div>
+          </article>
+          <article class="card mentor">
+            <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=crop&w=300&q=80" alt="导师 王宁" />
+            <div>
+              <h3>王宁 · 数据科学</h3>
+              <p>10 年数据科学与教育经验，帮助学员在金融与医疗场景中落地机器学习方案。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="section__header">
+          <h2>常见问题</h2>
+          <p>选择感兴趣的问题了解更多信息。</p>
+        </div>
+        <div class="faq__list" id="faqList"></div>
+      </section>
+
+      <section id="cta" class="section cta">
+        <div class="cta__content">
+          <h2>准备好开始你的 AI 学习旅程了吗？</h2>
+          <p>
+            立即预约体验课，获取专属学习规划与项目建议。我们会在 24 小时内联系你。
+          </p>
+          <form class="cta__form" id="trialForm" novalidate>
+            <div class="form__field">
+              <label for="name">姓名</label>
+              <input id="name" name="name" type="text" required placeholder="例如：李雷" />
+              <p class="form__error" data-for="name"></p>
+            </div>
+            <div class="form__field">
+              <label for="email">邮箱</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              <p class="form__error" data-for="email"></p>
+            </div>
+            <div class="form__field">
+              <label for="goal">学习目标</label>
+              <select id="goal" name="goal" required>
+                <option value="">请选择</option>
+                <option value="career">转行成为 AI 工程师</option>
+                <option value="upskill">提升现有岗位能力</option>
+                <option value="research">探索科研方向</option>
+              </select>
+              <p class="form__error" data-for="goal"></p>
+            </div>
+            <button class="btn btn--primary" type="submit">预约体验课</button>
+          </form>
+          <p class="cta__note" id="formNote" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="currentYear"></span> AI 学习实验室 · 与世界共享 AI 教育</p>
+      <nav class="footer__links">
+        <a href="#highlights">教学特色</a>
+        <a href="#curriculum">课程大纲</a>
+        <a href="#mentors">导师团队</a>
+        <a href="#cta">预约体验</a>
+      </nav>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
